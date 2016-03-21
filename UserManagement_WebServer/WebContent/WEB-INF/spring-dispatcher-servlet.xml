@@ -30,5 +30,11 @@
 			value="http://localhost:8082/UserManagement_AppServer/createUser.http"></property>
 		<property name="serviceInterface" value="org.crce.interns.service.UserService"></property>
 	</bean>
-
+	
+	<bean id="directoryService"
+		class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+		<property name="serviceUrl"
+			value="http://localhost:8082/UserManagement_AppServer/directoryService.http"></property>
+		<property name="serviceInterface" value="org.crce.interns.service.DirectoryService"></property>
+	</bean>
 </beans>
