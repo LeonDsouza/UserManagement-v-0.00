@@ -50,5 +50,12 @@
 		<property name="service" ref="createUser"></property>
 		<property name="serviceInterface" value="org.crce.interns.service.UserService"></property>
 	</bean>
-
+	
+	<bean id="directoryService" class="org.crce.interns.service.DirectoryServiceImpl"></bean>
+	<bean name="/directoryService.http"
+		class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+		<property name="service" ref="directoryService"></property>
+		<property name="serviceInterface" value="org.crce.interns.service.DirectoryService"></property>
+	</bean>
+	
 </beans>
